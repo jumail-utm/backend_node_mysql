@@ -7,14 +7,14 @@ DROP TABLE IF EXISTS todos;
 CREATE TABLE IF NOT EXISTS todos(
     id INT NOT NULL AUTO_INCREMENT,
     title VARCHAR(255),
-    completed BOOLEAN DEFAULT false,
+    completed INT DEFAULT 0,
 
     PRIMARY KEY (id)
-)
+);
 
 INSERT INTO todos(title, completed) VALUES
-    ('Prepare proposal for the new project', true),
-    ('Replace light bulb', true),
-    ('Buy Flutter eBook',false),
-    ('Subscribe to Fibre optic internet service',false),
-    ('Setup online meeting room', true)
+    ('Prepare proposal for the new project', 1),
+    ('Replace light bulb', 1),
+    ('Buy Flutter eBook',0),
+    ('Subscribe to Fibre optic internet service',0),
+    ('Setup online meeting room', 1);

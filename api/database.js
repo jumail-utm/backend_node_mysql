@@ -27,6 +27,7 @@ class Database {
                 database: process.env.DATABASE_NAME
             }
         )
+
     }
 
     // This method is only a convinience wrapper. It is intended to convert Callback-based style to Promise-based style

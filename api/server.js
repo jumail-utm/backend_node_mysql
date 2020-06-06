@@ -4,6 +4,8 @@ const todosRouter = require('./controllers/todos_controller')
 
 const app = express()
 
+app.use(express.json())
+
 app.get('/', (req, res, next) => res.send(`Server is running on port ${port}`))
 app.use('/todos', todosRouter)
 

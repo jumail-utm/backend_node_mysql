@@ -17,7 +17,7 @@
 GET {{baseUrl}}/todos
 
 ###  Getting a todo of given id
-GET {{baseUrl}}/todos/1
+GET {{baseUrl}}/todos/31
 
 ###  Create a new todo
 POST {{baseUrl}}/todos
@@ -30,7 +30,7 @@ Content-Type: application/json
 
 
 ### Update the status of a given todo (whether is completed or not)
-PATCH {{baseUrl}}/todos/1
+PATCH {{baseUrl}}/todos/21
 Content-Type: application/json
 
 {
@@ -38,4 +38,4 @@ Content-Type: application/json
 }
 
 ### Deleting a given todo
-DELETE {{baseUrl}}/todos/13
+DELETE {{baseUrl}}/todos/21

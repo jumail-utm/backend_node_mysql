@@ -16,7 +16,7 @@ class TodoModel {
     }
 
     async getById(id) {
-        const rows = await database.query('SELECT * FROM todos WHERE id=?', [id])
+        const rows = await database.query('SELECT * FROM todos WHERE id = ?', [id])
         return rows[0]
     }
 
