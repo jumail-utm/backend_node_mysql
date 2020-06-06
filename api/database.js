@@ -1,4 +1,4 @@
-require('dotenv').config()  // Uncomment this when deploying to heroku
+// require('dotenv').config()  // Uncomment this when deploying to heroku
 
 const mysql = require('mysql')
 

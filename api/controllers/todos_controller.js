@@ -18,7 +18,6 @@ router.get('/', async (req, res, next) => {
 router.get('/:id', async (req, res, next) => {
     try {
         const result = await todosModel.getById(req.params.id)
-        console.log(req.params.id, result)
         if (!result) return res.sendStatus(404)
         res.json(result)
     }
