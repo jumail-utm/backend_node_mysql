@@ -1,16 +1,16 @@
-const database = require('../database')
+const todosModel = require('../models/todos_model')
 const express = require('express')
 const router = express.Router()
 
 router.get('/', async (req, res, next) => {
-    // Test database connection
-    const result = await database.query('SELECT * FROM todos')
+    // Test the model
+    const result = await todosModel.get()
     res.json(result)
 })
 
-router.get('/:id', (req, res, next) => {
-    const todoId = req.params.id
-    res.json({ result: `Get the todo of id ${todoId}` })
+router.get('/:id', async (req, res, next) => {
+    const result = await todosModel.getById(req.params.id)
+    res.json(result)
 })
 
 module.exports = router
