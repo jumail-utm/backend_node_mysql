@@ -1,0 +1,41 @@
+##############################################################
+# Mobile Application Programming (SCSJ3623)
+# Semester 2, 2019/2020
+##############################################################
+
+# Uncomment the server you want to test out
+# Localhost - Change the IP address below to your PC's IP address
+@baseUrl = http://192.168.0.4:3000
+
+# JSON Server online
+# @baseUrl = https://my-json-server.typicode.com/jumail-utm/backend_node_mysql
+
+# REST API Server on heroku. Write the app URL obtained from heroku
+# @baseUrl = https://
+
+### Getting the list of todos
+GET {{baseUrl}}/todos
+
+###  Getting a todo of given id
+GET {{baseUrl}}/todos/1
+
+###  Create a new todo
+POST {{baseUrl}}/todos
+Content-Type: application/json
+
+{
+    "title": "New todo 3",
+    "completed" : false
+}
+
+
+### Update the status of a given todo (whether is completed or not)
+PATCH {{baseUrl}}/todos/1
+Content-Type: application/json
+
+{
+    "completed": false
+}
+
+### Deleting a given todo
+DELETE {{baseUrl}}/todos/13
