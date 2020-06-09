@@ -300,7 +300,9 @@ Use REST Client to test the API server
 
 Edit the file file `./dev/rest_client/request.rest`
 
-```console
+{% raw %}
+
+```bash
 @baseUrl = http://localhost:3000
 
 ### Getting the list of todos
@@ -330,3 +332,4 @@ Content-Type: application/json
 DELETE {{baseUrl}}/todos/21
 
 ```
+{% raw %}
