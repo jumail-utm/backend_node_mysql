@@ -2,16 +2,10 @@
 
 ## Prepare the node project for deployment to heroku
 
-Comment out the part of code that loads mock environment variables in `./api/database.js`
+Comment out the part of code that loads mock environment variables in `./api/server.js` or in  `./api/database.js`
 
 ```javascript
 // require('dotenv').config()  // Comment this when deploying to heroku
-
-const mysql = require('mysql')
-
-
-class Database {
-
 ```
 
 Issue the following commands in Git bash CLI
