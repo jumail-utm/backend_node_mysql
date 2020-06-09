@@ -300,7 +300,7 @@ Use REST Client to test the API server
 
 Edit the file file `./dev/rest_client/request.rest`
 
-```bash
+```console
 @baseUrl = http://localhost:3000
 
 ### Getting the list of todos
