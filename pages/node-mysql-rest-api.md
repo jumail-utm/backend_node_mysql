@@ -300,19 +300,17 @@ Use REST Client to test the API server
 
 Edit the file file `./dev/rest_client/request.rest`
 
-{% raw %}
-
 ```bash
-@baseUrl = http://localhost:3000
+# @baseUrl = http://localhost:3000
 
 ### Getting the list of todos
-GET {{baseUrl}}/todos
+GET http://localhost:3000/todos
 
 ###  Getting a todo of given id
-GET {{baseUrl}}/todos/31
+GET http://localhost:3000/todos/31
 
 ###  Create a new todo
-POST {{baseUrl}}/todos
+POST http://localhost:3000/todos
 Content-Type: application/json
 
 {
@@ -321,7 +319,7 @@ Content-Type: application/json
 }
 
 ### Update the status of a given todo (whether is completed or not)
-PATCH {{baseUrl}}/todos/21
+PATCH http://localhost:3000/todos/21
 Content-Type: application/json
 
 {
@@ -329,7 +327,6 @@ Content-Type: application/json
 }
 
 ### Deleting a given todo
-DELETE {{baseUrl}}/todos/21
+DELETE http://localhost:3000/todos/21
 
 ```
-{% raw %}
